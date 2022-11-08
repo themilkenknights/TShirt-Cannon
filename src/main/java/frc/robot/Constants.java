@@ -89,7 +89,7 @@ public final class Constants {
     // Turning motor -> CTRE CANcoder (4096 units)
     public static final double kMaxModuleAngularSpeedRadiansPerSecond = 20 * Math.PI;
     public static final double kMaxModuleAngularAccelerationRadiansPerSecondSquared = 35 * Math.PI;
-    public static final double kDriveGearRatio = 8.14; // Todo:
+    public static final double kDriveGearRatio = 6.75; // Todo:
     public static final double kTurningGearRatio = 12.8;
 
     public static final int kDriveFXEncoderCPR = 2048;
