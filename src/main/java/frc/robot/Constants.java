@@ -29,6 +29,7 @@ import edu.wpi.first.math.trajectory.TrapezoidProfile;
 public final class Constants {
 
   public static final class DriveConstants {
+    
     public static final int kFrontLeftDriveMotorPort = 3;
     public static final int kRearLeftDriveMotorPort = 2;
     public static final int kFrontRightDriveMotorPort = 5;
@@ -44,20 +45,20 @@ public final class Constants {
     public static final int kFrontRightTurningEncoderPorts = 18;
     public static final int kRearRightTurningEncoderPorts = 17;
 
-    public static final double kFrontLeftAngleZero = -115.224; 
-    public static final double kRearLeftAngleZero = -87.199; 
-    public static final double kFrontRightAngleZero = -84.199;
-    public static final double kRearRightAngleZero = -128; 
+    public static final double kFrontLeftAngleZero = -3.7; 
+    public static final double kRearLeftAngleZero = -3.7; 
+    public static final double kFrontRightAngleZero = -3.7;
+    public static final double kRearRightAngleZero = -3.7; 
 
     public static final boolean kFrontLeftTurningEncoderReversed = false;
     public static final boolean kRearLeftTurningEncoderReversed = false;
     public static final boolean kFrontRightTurningEncoderReversed = false;
-    public static final boolean kRearRightTurningEncoderReversed = true;
+    public static final boolean kRearRightTurningEncoderReversed = false;
 
-    public static final boolean kFrontLeftDriveEncoderReversed = false;
-    public static final boolean kRearLeftDriveEncoderReversed = false;
-    public static final boolean kFrontRightDriveEncoderReversed = false;
-    public static final boolean kRearRightDriveEncoderReversed = false;
+    public static final boolean kFrontLeftDriveEncoderReversed = true;
+    public static final boolean kRearLeftDriveEncoderReversed = true;
+    public static final boolean kFrontRightDriveEncoderReversed = true;
+    public static final boolean kRearRightDriveEncoderReversed = true;
 
     public static final double kTrackWidth = 0.577; // meters
     // Distance between centers of right and left wheels on robot
@@ -90,7 +91,7 @@ public final class Constants {
     public static final double kMaxModuleAngularSpeedRadiansPerSecond = 20 * Math.PI;
     public static final double kMaxModuleAngularAccelerationRadiansPerSecondSquared = 35 * Math.PI;
     public static final double kDriveGearRatio = 6.75; // Todo:
-    public static final double kTurningGearRatio = 12.8;
+    public static final double kTurningGearRatio = 50/7;
 
     public static final int kDriveFXEncoderCPR = 2048;
     public static final int kTurningCANcoderCPR = 4096;
@@ -100,7 +101,7 @@ public final class Constants {
 
     // PID turn motor values
 
-    public static final double kPModuleTurningController = 6;
+    public static final double kPModuleTurningController = .1;
     public static final double kDModuleTurningController = .1;
 
     public static final double kPModuleDriveController = 3;

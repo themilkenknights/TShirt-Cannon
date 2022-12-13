@@ -18,6 +18,7 @@ import edu.wpi.first.math.kinematics.SwerveDriveOdometry;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.DriveConstants;
 
@@ -104,6 +105,8 @@ public class DriveSubsystem extends SubsystemBase {
 
     gyroEntry.setDouble(NAVX.getYaw());
 
+    //SmartDashboard.putNumber("test", m_frontLeft.getModuleHeading());
+
     m_odometry.update(
       Rotation2d.fromDegrees(NAVX.getYaw()),
       m_frontLeft.getState(),
@@ -152,10 +155,11 @@ public class DriveSubsystem extends SubsystemBase {
     xSpeedEntry.setDouble(xSpeed);
     ySpeedEntry.setDouble(ySpeed);
     rotEntry.setDouble(rot);
-    frontLeftStateEntry.setDouble(swerveModuleStates[0].speedMetersPerSecond);
-    frontRightStateEntry.setDouble(swerveModuleStates[1].speedMetersPerSecond);
-    rearRightStateEntry.setDouble(swerveModuleStates[2].speedMetersPerSecond);
-    rearLeftStateEntry.setDouble(swerveModuleStates[3].speedMetersPerSecond);
+    frontLeftStateEntry.setDouble(swerveModuleStates[0].angle.getDegrees());
+    frontRightStateEntry.setDouble(swerveModuleStates[1].angle.getDegrees());
+    rearRightStateEntry.setDouble(swerveModuleStates[2].angle.getDegrees());
+    rearLeftStateEntry.setDouble(swerveModuleStates[3].angle.getDegrees());
+    
 
   }
 

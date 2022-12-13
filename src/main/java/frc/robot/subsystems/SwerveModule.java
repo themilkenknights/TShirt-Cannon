@@ -65,8 +65,8 @@ public class SwerveModule extends SubsystemBase {
       double angleZero) {
     
     // Initialize the motors
-    m_driveMotor = new WPI_TalonFX(driveMotorChannel);
-    m_turningMotor = new WPI_TalonFX(turningMotorChannel);
+    m_driveMotor = new WPI_TalonFX(driveMotorChannel,"train");
+    m_turningMotor = new WPI_TalonFX(turningMotorChannel,"train");
 
     // Configure current lmits for motors - prevents disabling/brownout
     m_driveMotor.configSupplyCurrentLimit(new SupplyCurrentLimitConfiguration(true, 40, 45, 0.5)); //40, 45, 0.5
